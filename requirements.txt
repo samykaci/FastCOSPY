@@ -1,0 +1,6 @@
+# Core dependencies for FastCOSPY
+numpy>=1.24
+torch>=2.1
+
+# For examples and plotting
+matplotlib>=3.7
