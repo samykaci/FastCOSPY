@@ -98,6 +98,13 @@ The FastCOSPY emulator is based on a hybrid architecture combining a U-Net, an L
 
 ---
 
+## Training
+
+This surrogate model was trained for 30 epochs on 11000 simulations made using the COSPY framework, with a batch size of 32. Each image has (21, 720) pixels with 7 channels. To reach the minimum, the Adam optimizer with a starting learning rate of 5e-5, and a weight decay of 1e-6 has been chosen and used with the ReduceLROnPlateau learning rate scheduler with a patience of 2 and a reduction factor of 0.5. The loss function is the mean squared error (MSE) in logarithmic flux space, applied both to the per-pixel prediction and to the gradients, forcing the network to reproduce spatial structure as well as absolute values. Alternative loss variants, such as giving more weight to bright pixels, were explored but led to overfitting.
+
+
+---
+
 ### Input Feature Channels
 
 FastCOSPY expects a **14-channel feature tensor** of shape:
