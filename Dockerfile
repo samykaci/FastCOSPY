@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ src/
 COPY example/ example/
 
-CMD ["python", "example/example_script.py"]
+CMD ["python", "examples/example_script.py"]
